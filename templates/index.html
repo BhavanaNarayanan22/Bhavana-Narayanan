@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        ComicCraft - AI Comic Creator
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="{{ url_for('static', path='style.css') }}"
+    >
+
+</head>
+
+
+<body>
+
+
+<main class="container">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+        <p class="eyebrow">
+            AI COMIC STORY CREATOR
+        </p>
+
+
+        <h1>
+            Turn your idea into a comic.
+        </h1>
+
+
+        <p>
+
+            Create a personalized
+            five-panel comic using AI.
+
+            Enter your story idea,
+            choose your character,
+            setting, tone and art style.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- FORM -->
+
+    <form
+        class="card form-grid"
+        action="/generate"
+        method="post"
+    >
+
+
+        <!-- Story Prompt -->
+
+        <label>
+
+            Story Prompt
+
+            <textarea
+                name="story_prompt"
+                required
+                placeholder="A brave fox exploring an enchanted forest..."
+            ></textarea>
+
+        </label>
+
+
+
+        <!-- Character -->
+
+        <label>
+
+            Main Character Name
+
+            <input
+                type="text"
+                name="character_name"
+                required
+                placeholder="Luna"
+            >
+
+        </label>
+
+
+
+        <!-- Setting -->
+
+        <label>
+
+            Setting
+
+            <select name="setting">
+
+                <option>
+                    Forest
+                </option>
+
+                <option>
+                    School
+                </option>
+
+                <option>
+                    City
+                </option>
+
+                <option>
+                    Space
+                </option>
+
+                <option>
+                    Beach
+                </option>
+
+            </select>
+
+        </label>
+
+
+
+        <!-- Tone -->
+
+        <label>
+
+            Story Tone
+
+            <select name="tone">
+
+                <option>
+                    Funny
+                </option>
+
+                <option>
+                    Light-hearted
+                </option>
+
+                <option>
+                    Dramatic
+                </option>
+
+                <option>
+                    Poetic
+                </option>
+
+                <option>
+                    Adventure
+                </option>
+
+            </select>
+
+        </label>
+
+
+
+        <!-- Art Style -->
+
+        <label>
+
+            Art Style
+
+            <select name="art_style">
+
+                <option>
+                    Comic book
+                </option>
+
+                <option>
+                    Anime
+                </option>
+
+                <option>
+                    Pixel art
+                </option>
+
+                <option>
+                    Realistic
+                </option>
+
+                <option>
+                    Cartoon
+                </option>
+
+            </select>
+
+        </label>
+
+
+
+        <!-- Submit -->
+
+        <button type="submit">
+
+            ✨ Generate My Comic
+
+        </button>
+
+
+    </form>
+
+
+
+    <p class="small">
+
+        For your first test, you can use
+        <code>MOCK_MODE=true</code>
+        in the .env file.
+
+    </p>
+
+
+</main>
+
+
+</body>
+
+</html>
